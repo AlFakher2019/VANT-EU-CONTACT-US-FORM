@@ -187,7 +187,7 @@ ul {
   -moz-border-radius: 2px;
   border-radius: 4px;
   padding: 5px;
-  font-size: 15px;
+  font-size: 13px;
   color: rgb(37, 44, 62);
   padding: 11px 10px 10px 10px;
   height: 56px;
@@ -1821,6 +1821,16 @@ ul {
   .box-address {
     width: 100% !important;
   }
+ .zf-nameWrapper{
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+ }
+ .zf-nameWrapper > span {
+  width: 100% !important;
+  display: block !important;
+}
 }
 @media (max-width: 768px) {
   .zf-templateWidth {
@@ -1838,19 +1848,10 @@ ul {
     box-sizing: border-box;
     min-height: 160px;
   }
+  
 }
 em {
   font-style: normal;
-}
-
-select {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  font-size: 16px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .ss-content .ss-list .ss-option:hover {
   background-color: rgb(233, 233, 233) !important; 
@@ -1859,4 +1860,39 @@ select {
 .ss-content .ss-list .ss-option.ss-selected {
   background-color:  rgb(233, 233, 233) !important;
   color: #000 !important;
+}
+.zf-form-sBox {
+  font-size: 12.5px;
+  color: #000 !important; 
+}
+
+ .ss-option .desc {
+  font-size: 12px !important;
+  color: gray !important;
+  
+}
+.ss-option{
+  color: #000 !important;
+}
+.ss-option .desc {
+  font-size: 12px !important;
+  color: gray !important;
+  
+  display: block;        
+  line-height: 1 !important;
+}
+
+.ss-content .ss-list .ss-option .option-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; 
+}
+
+.ss-content .ss-list .ss-option .desc {
+  font-size: 12px;
+  color: gray;
+  
+  margin: 0;        
+  padding: 0;
+  line-height: 1.1;
 }
