@@ -1801,6 +1801,7 @@ ul {
   .zfthreeColumn {
     flex-direction: column !important;
     flex-wrap: wrap !important;
+    
   }
 
   .zftwoColumn .zfCol,

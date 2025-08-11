@@ -54,8 +54,27 @@
               <div class="zf-clearBoth"></div>
             </div>
             <div class="zfgrid_Wrapper">
-              <!-- email -->
+              
+
+              <div class="zftwoColumn zfMultiColGrid">
+                <div class="zfCol">
+                  <div class="zf-tempFrmWrapper  zf-large "><label class="zf-labelName">
+                                Order Number
+                            </label>
+                            <div class="zf-tempContDiv">
+                                <span>
+                                    <input type="text" name="SingleLine3" checktype="c1" value="" maxlength="255"
+                                        fieldType=1 placeholder="" /> </span>
+                                <p id="SingleLine3_error" class="zf-errorMessage" style="display: none;">Invalid value
+                                </p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </div>
+                </div>
+                <div class="zfCol">
+                  <!-- email -->
               <div class="zf-tempFrmWrapper zf-large">
+
                 <label class="zf-labelName">
                   Email
                   <em class="zf-important"> *</em>
@@ -71,10 +90,13 @@
                 </div>
                 <div class="zf-clearBoth"></div>
               </div>
+                </div>
+              </div>
+
               <div class="zftwoColumn zfMultiColGrid">
                 <div class="zfCol">
 
-                  <div class="zf-tempFrmWrapper zf- zf-large">
+                  <div class="zf-tempFrmWrapper  zf-large">
                     <label class="zf-labelName"> Phone </label>
                     <div class="zf-tempContDiv zf-phonefld">
                       <div class="zf-phwrapper zf-phNumber">
@@ -158,7 +180,7 @@
     var zf_DateRegex = new RegExp(dateAndMonthRegexFormateArray[0]);
     var zf_MonthYearRegex = new RegExp(dateAndMonthRegexFormateArray[1]);
     var zf_MandArray = ["Name_First", "Name_Last", "Email", "Dropdown", "SingleLine", "MultiLine"];
-    var zf_FieldArray = ["Name_First", "Name_Last", "Email", "PhoneNumber_countrycode", "Dropdown", "SingleLine", "MultiLine"];
+    var zf_FieldArray = ["Name_First", "Name_Last", "Email", "PhoneNumber_countrycode", "Dropdown", "SingleLine","SingleLine3", "MultiLine"];
     var isSalesIQIntegrationEnabled = false;
     var salesIQFieldsArray = [];</script>
     <script src="https://cdn.jsdelivr.net/npm/slim-select@2.8.0/dist/slimselect.min.js"></script>
