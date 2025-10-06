@@ -9,6 +9,31 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="js/validation.js"></script>
+  <style>
+    button.zf-submitColor {
+      color: #6c6d73;
+      border: 1px solid transparent;
+      font-weight: 600;
+      font-size: 16px;
+      background: #ebebed;
+      border-radius: 150px;
+      min-width: 100px;
+      transition: transform 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93),
+        -webkit-transform 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93),
+        -o-transform 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+    button.zf-submitColor.enabled {
+      background-color: #0854e2;
+      cursor: pointer;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
 
 <body class="zf-backgroundBg">
@@ -25,8 +50,8 @@
       <input type="hidden" name="zc_gad"
         value="" /><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
       <div class="zf-templateWrapper">
-       
-        
+
+
         <div class="zf-subContWrap zf-topAlign">
           <ul>
             <span class="sub-title">Send us a message</span>
@@ -48,48 +73,48 @@
                   </span>
                 </div>
                 <p id="Name_error" class="zf-errorMessage" style="display: none">
-                  Invalid value
+                  Please Enter your Frist name/last name
                 </p>
               </div>
               <div class="zf-clearBoth"></div>
             </div>
             <div class="zfgrid_Wrapper">
-              
+
 
               <div class="zftwoColumn zfMultiColGrid">
                 <div class="zfCol">
                   <div class="zf-tempFrmWrapper  zf-large "><label class="zf-labelName">
-                                Order Number
-                            </label>
-                            <div class="zf-tempContDiv">
-                                <span>
-                                    <input type="text" name="SingleLine3" checktype="c1" value="" maxlength="255"
-                                        fieldType=1 placeholder="" /> </span>
-                                <p id="SingleLine3_error" class="zf-errorMessage" style="display: none;">Invalid value
-                                </p>
-                            </div>
-                            <div class="zf-clearBoth"></div>
-                        </div>
+                      Order Number
+                    </label>
+                    <div class="zf-tempContDiv">
+                      <span>
+                        <input type="text" name="SingleLine3" checktype="c1" value="" maxlength="255" fieldType=1
+                          placeholder="" /> </span>
+                      <p id="SingleLine3_error" class="zf-errorMessage" style="display: none;">Invalid value
+                      </p>
+                    </div>
+                    <div class="zf-clearBoth"></div>
+                  </div>
                 </div>
                 <div class="zfCol">
                   <!-- email -->
-              <div class="zf-tempFrmWrapper zf-large">
+                  <div class="zf-tempFrmWrapper zf-large">
 
-                <label class="zf-labelName">
-                  Email
-                  <em class="zf-important"> *</em>
-                </label>
-                <div class="zf-tempContDiv">
-                  <span>
-                    <input type="text" name="Email" checktype="c5" value="" maxlength="255" fieldType="9"
-                      placeholder="" />
-                  </span>
-                  <p id="Email_error" class="zf-errorMessage" style="display: none">
-                    Invalid value
-                  </p>
-                </div>
-                <div class="zf-clearBoth"></div>
-              </div>
+                    <label class="zf-labelName">
+                      Email
+                      <em class="zf-important"> *</em>
+                    </label>
+                    <div class="zf-tempContDiv">
+                      <span>
+                        <input type="text" name="Email" checktype="c5" value="" maxlength="255" fieldType="9"
+                          placeholder="" />
+                      </span>
+                      <p id="Email_error" class="zf-errorMessage" style="display: none">
+                        Invalid value
+                      </p>
+                    </div>
+                    <div class="zf-clearBoth"></div>
+                  </div>
                 </div>
               </div>
 
@@ -109,7 +134,7 @@
                         <div class="zf-clearBoth"></div>
                       </div>
                       <p id="PhoneNumber_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
+                        Enter your phone number /valid number
                       </p>
                     </div>
                     <div class="zf-clearBoth"></div>
@@ -124,11 +149,11 @@
                     </label>
                     <div class="zf-tempContDiv">
                       <select class="zf-form-sBox" name="Dropdown" checktype="c1" id="reason">
-                        
+
                       </select>
 
                       <p id="Dropdown_error" class="zf-errorMessage" style="display: none">
-                        Invalid value
+                        Please select the reason 
                       </p>
                     </div>
                     <div class="zf-clearBoth"></div>
@@ -149,7 +174,7 @@
                     placeholder="" />
                 </span>
                 <p id="SingleLine_error" class="zf-errorMessage" style="display: none">
-                  Invalid value
+                  Subject is required
                 </p>
               </div>
               <div class="zf-clearBoth"></div>
@@ -166,11 +191,21 @@
               </div>
               <div class="zf-clearBoth"></div>
             </div>
+            <div class="zf-tempFrmWrapper zf-decesion ">
+              <div class="zf-tempContDiv"><input type="checkbox" checktype="c1" id="DecisionBox"
+                  name="DecisionBox" /><label for="DecisionBox" class="zf-labelName">
+                  We will use the details you provide to respond to your enquiry. For more information on how we handle
+                  your personal data and your rights, please see our <a style="color: black; text-decoration: underline;" href="https://tryvant.com/es-en/content/privacy-policy" target="_blank">Privacy Policy.</a>
+                </label>
+                <p id="DecisionBox_error" class="zf-errorMessage" style="display: none;">Please Select the checkbox
+              </div>
+              <div class="zf-clearBoth"></div>
+            </div>
           </ul>
         </div>
         <ul>
           <li class="zf-fmFooter">
-            <button type="submit" class="zf-submitColor">Submit</button>
+            <button type="submit" class="zf-submitColor">SUBMIT</button>
           </li>
         </ul>
       </div>
@@ -179,109 +214,170 @@
   <script type="text/javascript">var dateAndMonthRegexFormateArray = zf_SetDateAndMonthRegexBasedOnDateFormate('dd-MMM-yyyy');
     var zf_DateRegex = new RegExp(dateAndMonthRegexFormateArray[0]);
     var zf_MonthYearRegex = new RegExp(dateAndMonthRegexFormateArray[1]);
-    var zf_MandArray = ["Name_First", "Name_Last", "Email", "Dropdown", "SingleLine", ];
-    var zf_FieldArray = ["Name_First", "Name_Last", "Email", "PhoneNumber_countrycode", "Dropdown", "SingleLine","SingleLine3", "MultiLine"];
+    var zf_MandArray = ["Name_First", "Name_Last", "Email", "Dropdown", "SingleLine", "DecisionBox"];
+    var zf_FieldArray = ["Name_First", "Name_Last", "Email", "PhoneNumber_countrycode", "Dropdown", "SingleLine", "SingleLine3", "MultiLine", "DecisionBox"];
     var isSalesIQIntegrationEnabled = false;
     var salesIQFieldsArray = [];</script>
-    <script src="https://cdn.jsdelivr.net/npm/slim-select@2.8.0/dist/slimselect.min.js"></script>
-<script>
-  new SlimSelect({
-  select: '#reason',
-  allowHtml: true,
-  data: [
-    {
-      html: `
+  <script src="https://cdn.jsdelivr.net/npm/slim-select@2.8.0/dist/slimselect.min.js"></script>
+  <script>
+    new SlimSelect({
+      select: '#reason',
+      allowHtml: true,
+      data: [
+        {
+          html: `
         <div class="option-wrapper">
           Select One Option
         </div>
       `,
-      text: 'Select One Option',
-      value: '-Select-',
-      selected: true
-    },
-    {
-      html: `
+          text: 'Select One Option',
+          value: '-Select-',
+          selected: true
+        },
+        {
+          html: `
         <div class="option-wrapper">
           I have a question about the product
           <div class="desc">(Device, pods, how it works, ingredients, or Benefits)</div>
         </div>
       `,
-      text: 'I have a question about the product',
-      value: 'I have a question about the product'
-    },
-    {
-      html: `
+          text: 'I have a question about the product',
+          value: 'I have a question about the product'
+        },
+        {
+          html: `
         <div class="option-wrapper">
           I’m having trouble with my device
           <div class="desc">(Charging, usage, pod recognition, or performance issues)</div>
         </div>
       `,
-      text: 'I’m having trouble with my device',
-      value: 'I’m having trouble with my device'
-    },
-    {
-      html: `
+          text: 'I’m having trouble with my device',
+          value: 'I’m having trouble with my device'
+        },
+        {
+          html: `
         <div class="option-wrapper">
           I want to share feedback
           <div class="desc">(My experience with Vânt — good, bad or suggestions)</div>
         </div>
       `,
-      text: 'I want to share feedback',
-      value: 'I want to share feedback'
-    },
-    {
-      html: `
+          text: 'I want to share feedback',
+          value: 'I want to share feedback'
+        },
+        {
+          html: `
         <div class="option-wrapper">
           I’m a retailer or distributor
           <div class="desc">(Interested in stocking or selling Vânt)</div>
         </div>
       `,
-      text: 'I’m a retailer or distributor',
-      value: 'I’m a retailer or distributor'
-    },
-    {
-      html: `
+          text: 'I’m a retailer or distributor',
+          value: 'I’m a retailer or distributor'
+        },
+        {
+          html: `
         <div class="option-wrapper">
           Other
           <div class="desc">(Anything else not listed above)</div>
         </div>
       `,
-      text: 'Other',
-      value: 'Other'
-    }
-  ]
-});
+          text: 'Other',
+          value: 'Other'
+        }
+      ]
+    });
 
-</script>
-<script>
-  function updateHeight() {
+  </script>
+  <script>
+    function updateHeight() {
       requestAnimationFrame(() => {
-          let formContainer = document.querySelector("#form");
-          if (formContainer) {
-              formContainer.style.display = "block"; 
-              void formContainer.offsetHeight; 
+        let formContainer = document.querySelector("#form");
+        if (formContainer) {
+          formContainer.style.display = "block";
+          void formContainer.offsetHeight;
 
-              let newHeight = formContainer.scrollHeight + 20;
-              window.parent.postMessage(newHeight, '*');
-              setTimeout(() => {
-                  document.body.style.overflow = "";
-              }, 300);
-          }
+          let newHeight = formContainer.scrollHeight + 20;
+          window.parent.postMessage(newHeight, '*');
+          setTimeout(() => {
+            document.body.style.overflow = "";
+          }, 300);
+        }
       });
-  }
-  document.addEventListener("DOMContentLoaded", function () {
+    }
+    document.addEventListener("DOMContentLoaded", function () {
       setTimeout(updateHeight, 100);
-  });
-  document.addEventListener("click", function(event) {
+    });
+    document.addEventListener("click", function (event) {
       if (event.target.matches(".next, .previous, .same")) {
-          setTimeout(updateHeight, 50);
+        setTimeout(updateHeight, 50);
       }
-  });
-  window.addEventListener("resize", updateHeight);
-  const observer = new MutationObserver(() => {
+    });
+    window.addEventListener("resize", updateHeight);
+    const observer = new MutationObserver(() => {
       updateHeight();
-  });
+    });
 
-  observer.observe(document.querySelector("#form"), { childList: true, subtree: true });
-</script>  
+    observer.observe(document.querySelector("#form"), { childList: true, subtree: true });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mandatoryFields = [
+        "Name_First",
+        "Name_Last",
+        "Email",
+        "Dropdown",
+        "SingleLine",
+        "DecisionBox"
+      ];
+      const form = document.getElementById("form");
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      function checkMandatoryFields() {
+        let allFilled = true;
+
+        for (const fieldName of mandatoryFields) {
+          const field = form.elements[fieldName];
+          if (!field) continue;
+
+          if (field.type === "checkbox") {
+            if (!field.checked) {
+              allFilled = false;
+              break;
+            }
+          } else if (field.tagName.toLowerCase() === "select") {
+            if (field.value === "-Select-" || field.value === "") {
+              allFilled = false;
+              break;
+            }
+          } else {
+            if (!field.value.trim()) {
+              allFilled = false;
+              break;
+            }
+          }
+        }
+
+        // 
+        if (allFilled) {
+          submitButton.classList.add("enabled");
+        } else {
+          submitButton.classList.remove("enabled");
+        }
+      }
+
+      // 
+      mandatoryFields.forEach(fieldName => {
+        const field = form.elements[fieldName];
+        if (!field) return;
+        const eventType =
+          field.type === "checkbox" || field.tagName.toLowerCase() === "select"
+            ? "change"
+            : "input";
+        field.addEventListener(eventType, checkMandatoryFields);
+      });
+
+      checkMandatoryFields(); // initial
+    });
+  </script>
+
 </body>

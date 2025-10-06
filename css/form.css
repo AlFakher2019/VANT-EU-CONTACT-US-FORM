@@ -648,17 +648,17 @@ ul {
   margin: 19% auto;
 }
 .zf-tempContDiv input[type="radio"]:checked:before {
-  background: rgba(46, 183, 159, 1);
+  background: black;
 }
 .zf-tempContDiv input[type="radio"]:checked {
-  border: 1.2px solid rgba(46, 183, 159, 1);
-  box-shadow: 0px 0px 0px 0.5px rgba(46, 183, 159, 1);
+  border: 1.2px solid black;
+  box-shadow: 0px 0px 0px 0.5px black;
   outline: none;
 }
 
 .zf-tempContDiv input[type="checkbox"]:checked {
-  border: 1.2px solid rgba(46, 183, 159, 1);
-  box-shadow: 0px 0px 2px 0px rgba(46, 183, 159, 1);
+  border: 1.2px solid black;
+  box-shadow: 0px 0px 2px 0px black;
   outline: none;
 }
 .zf-tempContDiv input[type="checkbox"]:checked:before {
@@ -667,8 +667,8 @@ ul {
   transform: rotate(45deg);
   height: 10px;
   width: 4px;
-  border-bottom: 2px solid rgba(46, 183, 159, 1);
-  border-right: 2px solid rgba(46, 183, 159, 1);
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
   position: absolute;
   top: -2px;
   left: 6px;
@@ -1913,3 +1913,35 @@ em {
     body::-webkit-scrollbar {
         display: none;              
     }}
+    @media (max-width: 768px) {
+  .zf-tempContDiv input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block !important;
+    float: left !important;
+    margin-top: 4px !important;
+  }
+  .zf-tempContDiv label {
+    width: auto !important;
+   
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+ 
+  .zf-tempFrmWrapper.zf-decesion .zf-tempContDiv {
+    display: flex;
+    align-items: flex-start;
+   
+  }
+  .zf-tempFrmWrapper.zf-decesion input[type="checkbox"] {
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+  .zf-tempFrmWrapper.zf-decesion label.zf-labelName {
+    line-height: 1.4;
+    margin: 0;
+  }
+  .zf-tempFrmWrapper.zf-decesion .zf-labelName {
+  margin-left: 8px !important;
+}
+}
